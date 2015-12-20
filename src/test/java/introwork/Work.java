@@ -12,6 +12,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class Work {
     private WebDriver driver;
@@ -42,15 +46,15 @@ public class Work {
         System.setProperty("webdriver.ie.driver", ieDriverPath());
 
         driver = new ChromeDriver();
-        driver_ff = new FirefoxDriver();
-        driver_ie = new InternetExplorerDriver();
+//        driver_ff = new FirefoxDriver();
+//        driver_ie = new InternetExplorerDriver();
     }
 
     @After
     public void tearDown() {
         driver.quit();
-        driver_ff.quit();
-        driver_ie.quit();
+//        driver_ff.quit();
+//        driver_ie.quit();
     }
 
     /**
@@ -62,18 +66,65 @@ public class Work {
     public void testLoginSuccess() throws Exception {
         // 指定したURLのウェブページに移動
         String url = "http://192.168.99.100/";
+        String url_goods = "http://192.168.99.100/products/detail/10005";
 
         // chrome
         driver.get(url);
+        driver.get(url_goods);
+        driver.findElement(By.className("btn-primary")).click();
+        driver.findElement(By.className("hover_change_image")).click();
+        driver.findElement(By.className("hover_change_image")).click();
+        driver.get("http://192.168.99.100/shopping/nonmember");
 
-        // firefox
-        driver_ff.get(url);
+        // driver.findElement(By.id("nonmember__token").sendKeys("");
+        // driver.findElement(By.id("nonmember__token").sendKeys(""));
+        driver.findElement(By.id("nonmember_name_name01")).sendKeys("松本");
+        driver.findElement(By.id("nonmember_name_name02")).sendKeys("智也");
+        driver.findElement(By.id("nonmember_kana_kana01")).sendKeys("まつもと");
+        driver.findElement(By.id("nonmember_kana_kana02")).sendKeys("ともや");
+        driver.findElement(By.id("nonmember_company_name")).sendKeys("会社名");
+        driver.findElement(By.id("zip01")).sendKeys("000");
+        driver.findElement(By.id("zip02")).sendKeys("0000");
+        WebElement selectBox0 = (driver.findElement(By.id("pref")));
+        Select select0 = new Select(selectBox0);
+        select0.selectByValue("36");
+        driver.findElement(By.id("addr01")).sendKeys("都道府県11111");
+        driver.findElement(By.id("addr02")).sendKeys("町11111");
+        driver.findElement(By.id("nonmember_tel_tel01")).sendKeys("000");
+        driver.findElement(By.id("nonmember_tel_tel02")).sendKeys("0000");
+        driver.findElement(By.id("nonmember_tel_tel03")).sendKeys("0000");
+        driver.findElement(By.id("nonmember_fax_fax01")).sendKeys("00");
+        driver.findElement(By.id("nonmember_fax_fax02")).sendKeys("0000");
+        driver.findElement(By.id("nonmember_fax_fax03")).sendKeys("0000");
+        driver.findElement(By.id("nonmember_email")).sendKeys("matsumoto@example.com");
+        driver.findElement(By.id("nonmember_sex_1")).click();
+        WebElement selectBox = (driver.findElement(By.id("nonmember_job")));
+        Select select = new Select(selectBox);
+        select.selectByValue("1");
+        WebElement selectBox1 = (driver.findElement(By.id("nonmember_birth_year")));
+        Select select1 = new Select(selectBox1);
+        select1.selectByValue("1993");
+        WebElement selectBox2 = (driver.findElement(By.id("nonmember_birth_month")));
+        Select select2 = new Select(selectBox2);
+        select2.selectByValue("1");
+        WebElement selectBox3 = (driver.findElement(By.id("nonmember_birth_day")));
+        Select select3 = new Select(selectBox3);
+        select3.selectByValue("7");
+        // driver.findElement(By.id("nonmember_sex_2")).sendKeys("");
+        driver.findElement(By.id("singular")).click();
 
-        // IE
-        driver_ie.get(url);
+        // page changed
+        // Thread.sleep(1000);
+        driver.findElement(By.id("next-top")).click();
 
-        // wait time
-        Thread.sleep(100);
+        // next page
+        assertThat(driver.findElement(By.className("title")).getText(), is("ご購入完了"));
+
+        //        // firefox
+//        driver_ff.get(url);
+//
+//        // IE
+//        driver_ie.get(url);
 
     }
 }
