@@ -13,7 +13,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-
 public class Work {
     private WebDriver driver;
     private WebDriver driver_ff;
