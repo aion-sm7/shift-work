@@ -1,6 +1,7 @@
 package introwork;
 
 import java.io.File;
+import java.net.URL;
 
 import org.apache.commons.lang3.SystemUtils;
 import org.junit.After;
@@ -12,15 +13,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class Work {
-    private WebDriver driver;
+//    private WebDriver driver;
     private WebDriver driver_ff;
     private WebDriver driver_ie;
+
+    private DesiredCapabilities capability = DesiredCapabilities.firefox();
+    // capability.setBrowserName(“firefox” );
+    private WebDriver driver;
 
     private String chromeDriverPath() {
         String path;
@@ -45,9 +52,15 @@ public class Work {
         System.setProperty("webdriver.chrome.driver", chromeDriverPath());
         System.setProperty("webdriver.ie.driver", ieDriverPath());
 
-        driver = new ChromeDriver();
+        // driver = new ChromeDriver();
 //        driver_ff = new FirefoxDriver();
 //        driver_ie = new InternetExplorerDriver();
+        try {
+            driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), capability);
+        }catch (java.net.MalformedURLException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @After

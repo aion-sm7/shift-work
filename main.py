@@ -223,6 +223,6 @@ def main():
     form = html.find("form")
     input_tags = form.find_all("input")
     for tag in input_tags:
-        print ''.join(["driver.findElement(By.id(\"",str(dict(tag.attrs)['id']).strip(),"\").sendKeys(\"\"));"])
+        print ''.join(["driver.findElement(By.id(\"",str(dict(tag.attrs)['id']).strip(),"\")).sendKeys(\"\"));"])
     
 main()
