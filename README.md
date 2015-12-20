@@ -1,3 +1,3 @@
-FOR SHIFT INTERN 2015.12.19-21
-T. Matsumoto
-ƒeƒXƒgŽ©“®‰»
+# FOR SHIFT INTERN 2015.12.19-21
+T. Matsumoto  
+ã«ã»ã‚“ã”ã¦ã™ã¨
