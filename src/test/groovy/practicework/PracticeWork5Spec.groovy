@@ -1,10 +1,12 @@
 package practicework
 
 import geb.spock.GebSpec
+import org.junit.Ignore
 import practicework.pages.ReserveConfirmGebPage
 import practicework.pages.ReserveInputGebPage
 import util.CalendarUtility
 
+@Ignore
 class PracticeWork5Spec extends GebSpec {
     def "InitialScreenShouldHaveDefaultValues"() {
         when:

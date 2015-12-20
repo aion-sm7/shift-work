@@ -1,10 +1,12 @@
 package practicework
 
 import geb.spock.GebSpec
+import org.junit.Ignore
 import practicework.pages.ReserveConfirmGebPage
 import practicework.pages.ReserveInputGebPage
 import util.CalendarUtility
 
+@Ignore
 class PracticeWork3Spec extends GebSpec {
     def "OneCanReserveWith1Member"() {
         when:

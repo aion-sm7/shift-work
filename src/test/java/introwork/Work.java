@@ -66,7 +66,7 @@ public class Work {
     public void testLoginSuccess() throws Exception {
         // 指定したURLのウェブページに移動
         String url = "http://192.168.99.100/";
-        String url_goods = "http://192.168.99.100/products/detail/10005";
+        String url_goods = "http://192.168.99.100/products/detail/10002";
 
         // chrome
         driver.get(url);

@@ -1,8 +1,10 @@
 package practicework
 
 import geb.spock.GebSpec
+import org.junit.Ignore
 import util.CalendarUtility
 
+@Ignore
 class PracticeWork1Spec extends GebSpec {
     def "OneCanReserveWith9Members"() {
         when:
