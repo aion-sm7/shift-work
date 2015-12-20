@@ -1,10 +1,12 @@
 package introwork;
 
-import geb.spock.GebSpec;
+import geb.spock.GebSpec
+import spock.lang.Ignore;
 
 /**
  * 入門課題その3:「文字列を入力してみよう」
  */
+@Ignore
 class IntroWork3Spec extends GebSpec {
     def "OneCanSetValue"() {
         when:

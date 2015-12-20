@@ -1,10 +1,12 @@
 package introwork;
 
-import geb.spock.GebSpec;
+import geb.spock.GebSpec
+import spock.lang.Ignore;
 
 /**
  * 入門課題その1:「動かしてみよう、Selenium」
  */
+@Ignore
 class IntroWork1Spec extends GebSpec {
     def "LoginShouldSuccess"() {
         when:

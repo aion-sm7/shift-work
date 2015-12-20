@@ -1,10 +1,12 @@
 package introwork;
 
-import geb.spock.GebSpec;
+import geb.spock.GebSpec
+import spock.lang.Ignore;
 
 /**
  * 入門課題その6:「プルダウンを選択してみよう」
  */
+@Ignore
 class IntroWork6Spec extends GebSpec {
     def "OneCanSelectOptionByValue"() {
         when:

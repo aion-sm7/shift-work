@@ -1,10 +1,11 @@
 package introwork;
 
-import geb.spock.GebSpec;
+import geb.spock.GebSpec
 
 /**
  * 入門課題その5:「チェックボックスを選択してみよう」
  */
+@spock.lang.Ignore
 class IntroWork5Spec extends GebSpec {
     def "OneCanSetCheckbox"() {
         when:

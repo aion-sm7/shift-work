@@ -1,10 +1,12 @@
 package introwork;
 
-import geb.spock.GebSpec;
+import geb.spock.GebSpec
+import spock.lang.Ignore;
 
 /**
  * 入門課題その7:「表示された値のチェックをしてみよう」
  */
+@Ignore
 class IntroWork7Spec extends GebSpec {
     def "OneCanGetAndCheckText"() {
         when:
