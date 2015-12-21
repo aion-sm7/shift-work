@@ -50,6 +50,7 @@ public class Work {
 
         // system propety かんきょうへんすうからうけとる
         String browser = System.getProperty("browser");
+
         switch(browser) {
             case "chrome":
                 driver = new ChromeDriver();

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac89464b-9e83-4c88-bbb5-cbd81ee6e8bd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/IEDriverServer_Win32_2.48.0/IEDriverServer.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/introwork/Work.class" afterPath="$PROJECT_DIR$/build/classes/test/introwork/Work.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/introwork/Work.java" afterPath="$PROJECT_DIR$/src/test/java/introwork/Work.java" />
     </list>
@@ -44,12 +42,12 @@
       <file leaf-file-name="Work.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/introwork/Work.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.977401">
-              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.3361582">
+              <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2731#2732#0" expanded="true" />
-                <element signature="e#2760#2761#0" expanded="true" />
+                <element signature="e#2732#2733#0" expanded="true" />
+                <element signature="e#2761#2762#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -736,12 +734,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Work - 2015.12.21 at 10h 37m 14s.xml">
-      <configuration name="Work" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Work - 2015.12.21 at 10h 38m 13s.xml">
-      <configuration name="Work" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Work - 2015.12.21 at 10h 45m 51s.xml">
       <configuration name="Work" configurationId="JUnit" />
     </history-entry>
@@ -764,6 +756,12 @@
       <configuration name="Work" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Work - 2015.12.21 at 11h 18m 47s.xml">
+      <configuration name="Work" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Work - 2015.12.21 at 11h 31m 17s.xml">
+      <configuration name="Work" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Work - 2015.12.21 at 11h 34m 06s.xml">
       <configuration name="Work" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1077,12 +1075,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/introwork/Work.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.977401">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.3361582">
+          <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2731#2732#0" expanded="true" />
-            <element signature="e#2760#2761#0" expanded="true" />
+            <element signature="e#2732#2733#0" expanded="true" />
+            <element signature="e#2761#2762#0" expanded="true" />
           </folding>
         </state>
       </provider>
