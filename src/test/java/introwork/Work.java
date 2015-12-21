@@ -21,13 +21,9 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class Work {
-//    private WebDriver driver;
-    private WebDriver driver_ff;
-    private WebDriver driver_ie;
-
-    private DesiredCapabilities capability = DesiredCapabilities.firefox();
-    // capability.setBrowserName(“firefox” );
     private WebDriver driver;
+    private DesiredCapabilities capability_chrome = DesiredCapabilities.chrome();
+    private DesiredCapabilities capability_firefox = DesiredCapabilities.firefox();
 
     private String chromeDriverPath() {
         String path;
@@ -42,7 +38,7 @@ public class Work {
 
     private String ieDriverPath() {
         String path_ie;
-        path_ie = "IEDriverServer_x64_2.45.0/IEDriverServer.exe";
+        path_ie = "IEDriverServer_Win32_2.48.0/IEDriverServer.exe";
         File file_ie = new File(path_ie);
         return file_ie.getAbsolutePath();
     }
@@ -52,22 +48,37 @@ public class Work {
         System.setProperty("webdriver.chrome.driver", chromeDriverPath());
         System.setProperty("webdriver.ie.driver", ieDriverPath());
 
-        // driver = new ChromeDriver();
-//        driver_ff = new FirefoxDriver();
-//        driver_ie = new InternetExplorerDriver();
-        try {
-            driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), capability);
-        }catch (java.net.MalformedURLException e) {
-            e.printStackTrace();
+        // system propety かんきょうへんすうからうけとる
+        String browser = System.getProperty("browser");
+        switch(browser) {
+            case "chrome":
+                driver = new ChromeDriver();
+                break;
+            case "firefox":
+                driver = new FirefoxDriver();
+                break;
+            case "remote-chrome":
+                try {
+                    driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), capability_chrome);
+                }catch (java.net.MalformedURLException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case "remote-firefox":
+                try {
+                    driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), capability_firefox);
+                }catch (java.net.MalformedURLException e) {
+                    e.printStackTrace();
+                }
+                break;
+            default:
+                driver = new FirefoxDriver();
         }
-
     }
 
     @After
     public void tearDown() {
         driver.quit();
-//        driver_ff.quit();
-//        driver_ie.quit();
     }
 
     /**
@@ -81,7 +92,6 @@ public class Work {
         String url = "http://192.168.99.100/";
         String url_goods = "http://192.168.99.100/products/detail/10002";
 
-        // chrome
         driver.get(url);
         driver.get(url_goods);
         driver.findElement(By.className("btn-primary")).click();
@@ -89,8 +99,6 @@ public class Work {
         driver.findElement(By.className("hover_change_image")).click();
         driver.get("http://192.168.99.100/shopping/nonmember");
 
-        // driver.findElement(By.id("nonmember__token").sendKeys("");
-        // driver.findElement(By.id("nonmember__token").sendKeys(""));
         driver.findElement(By.id("nonmember_name_name01")).sendKeys("松本");
         driver.findElement(By.id("nonmember_name_name02")).sendKeys("智也");
         driver.findElement(By.id("nonmember_kana_kana01")).sendKeys("まつもと");
@@ -132,12 +140,5 @@ public class Work {
 
         // next page
         assertThat(driver.findElement(By.className("title")).getText(), is("ご購入完了"));
-
-        //        // firefox
-//        driver_ff.get(url);
-//
-//        // IE
-//        driver_ie.get(url);
-
     }
 }
