@@ -8,6 +8,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,6 +25,7 @@ public class Work {
     private WebDriver driver;
     private DesiredCapabilities capability_chrome = DesiredCapabilities.chrome();
     private DesiredCapabilities capability_firefox = DesiredCapabilities.firefox();
+    private DesiredCapabilities capability_ie = DesiredCapabilities.internetExplorer();
 
     private String chromeDriverPath() {
         String path;
@@ -45,7 +47,6 @@ public class Work {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", chromeDriverPath());
         System.setProperty("webdriver.ie.driver", ieDriverPath());
 
         // system かんきょうへんすうからうけとる
@@ -53,12 +54,41 @@ public class Work {
 
         switch(browser) {
             case "chrome":
+                System.setProperty("webdriver.chrome.driver", chromeDriverPath());
                 driver = new ChromeDriver();
+                break;
+            case "chrome-from-hub":
+                capability_chrome.setPlatform(Platform.WIN8_1);
+                try {
+                    driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), capability_chrome);
+                }catch (java.net.MalformedURLException e) {
+                    e.printStackTrace();
+                }
                 break;
             case "firefox":
                 driver = new FirefoxDriver();
                 break;
+            case "firefox-from-hub":
+                capability_firefox.setPlatform(Platform.WIN8_1);
+                try {
+                    driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), capability_firefox);
+                }catch (java.net.MalformedURLException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case "ie":
+                driver = new InternetExplorerDriver();
+                break;
+            case "ie-from-hub":
+                capability_ie.setPlatform(Platform.WIN8_1);
+                try {
+                    driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), capability_ie);
+                }catch (java.net.MalformedURLException e) {
+                    e.printStackTrace();
+                }
+                break;
             case "remote-chrome":
+                System.setProperty("webdriver.chrome.driver", chromeDriverPath());
                 try {
                     driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), capability_chrome);
                 }catch (java.net.MalformedURLException e) {
