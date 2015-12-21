@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="practicework.PracticeWork5Spec" tests="1" failures="0" errors="0" timestamp="2015-12-21T04:08:19" hostname="hindai-09-PC" time="0.001">
+  <properties/>
+  <ignored-testcase name="InitialScreenShouldHaveDefaultValues" classname="practicework.PracticeWork5Spec" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

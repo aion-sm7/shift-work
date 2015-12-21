@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>testGetImmediateSundayOfWeekWhenTodayIsSunday</title>
+    <script src="../../js/share/common-utils.js"></script>
+    <script src="../../js/share/capture-style.js"></script>
+    <script src="../../js/share/yaml/js-yaml.min.js"></script>
+    <script src="../../js/share/yaml/yaml-utils.js"></script>
+    <script src="../../js/share/srctree/code/code.js"></script>
+    <script src="../../js/share/srctree/code/string-code.js"></script>
+    <script src="../../js/share/srctree/code/method-argument.js"></script>
+    <script src="../../js/share/srctree/code/unknown-code.js"></script>
+    <script src="../../js/share/srctree/code/sub-method-invoke.js"></script>
+    <script src="../../js/share/srctree/code/local-var.js"></script>
+    <script src="../../js/share/srctree/code/field.js"></script>
+    <script src="../../js/share/srctree/code/var-assign.js"></script>
+    <script src="../../js/share/srctree/code/class-instance.js"></script>
+    <script src="../../js/share/srctree/code/test-step.js"></script>
+    <script src="../../js/share/srctree/code/test-step-label.js"></script>
+    <script src="../../js/share/srctree/code/code-line.js"></script>
+    <script src="../../js/share/srctree/test-class.js"></script>
+    <script src="../../js/share/srctree/page-class.js"></script> 
+    <script src="../../js/share/srctree/test-field.js"></script>
+    <script src="../../js/share/srctree/test-field-table.js"></script>
+    <script src="../../js/share/srctree/test-method.js"></script>
+    <script src="../../js/share/srctree/test-method-table.js"></script>
+    <script src="../../js/share/srctree/test-class-table.js"></script>
+    <script src="../../js/share/srctree/src-tree.js"></script>
+    <script src="../../js/share/testdoc-resolver.js"></script>
+
+    <link href="../../css/perfect-scrollbar.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/jquery.treetable.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/jquery.treetable.theme.default.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/jquery.bxslider.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/report.css" rel="stylesheet" type="text/css" />
+
+    <script src="../../js/report/jquery-1.11.1.min.js"></script>
+    <script src="../../js/report/perfect-scrollbar.min.js"></script>
+    <script src="../../js/report/jquery.treetable.js"></script>
+    <script src="../../js/report/jquery.bxslider.min.js"></script>
+    <script src="../../js/report/src-tree-yaml.js"></script>
+    <script src="../../js/report/report.js"></script>
+    <script>
+      sahagin.errLineTtId = "";
+    </script>
+  </head>
+  <body>
+    <header>
+            <div>util.CalendarUtilityTest</div>
+                  <div>testGetImmediateSundayOfWeekWhenTodayIsSunday</div>
+          </header>
+    <div id="main_container">
+      <div id="button_container">
+        <div id="showSrcButton" onclick="showSrcInfo()"><u>&#12467;&#12540;&#12489;&#34920;&#31034; &gt;&gt;</u></div>
+        <div id="hideSrcButton" onclick="hideSrcInfo()"><u>&lt;&lt; &#12467;&#12540;&#12489;&#38750;&#34920;&#31034;</u></div>
+      </div>
+      <div id="left_container">
+        <div id="outer_script_table_container" class="noCode">
+          <div class="scrollContainer" id="script_table_container">
+            <table border="1" cellpadding="1" cellspacing="1" id="script_table">
+              <tbody>
+                                                                                                                                <tr data-tt-id="0"  data-image-id="0" data-method-key="" class="successLine ">
+                  <td>-</td>
+                  <td>- 非表示 -</td>
+                  <td class="srcInfo">Calendar sunday=Calendar.getInstance();</td>
+                </tr>
+                                                                                                                                <tr data-tt-id="1"  data-image-id="1" data-method-key="" class="successLine ">
+                  <td>-</td>
+                  <td>- 非表示 -</td>
+                  <td class="srcInfo">sunday.clear();</td>
+                </tr>
+                                                                                                                                <tr data-tt-id="2"  data-image-id="2" data-method-key="" class="successLine ">
+                  <td>-</td>
+                  <td>- 非表示 -</td>
+                  <td class="srcInfo">sunday.set(2014,Calendar.APRIL,27);</td>
+                </tr>
+                                                                                                                                <tr data-tt-id="3"  data-image-id="3" data-method-key="" class="successLine ">
+                  <td>-</td>
+                  <td>- 非表示 -</td>
+                  <td class="srcInfo">Calendar nextSaturday=Calendar.getInstance();</td>
+                </tr>
+                                                                                                                                <tr data-tt-id="4"  data-image-id="4" data-method-key="" class="successLine ">
+                  <td>-</td>
+                  <td>- 非表示 -</td>
+                  <td class="srcInfo">nextSaturday.clear();</td>
+                </tr>
+                                                                                                                                <tr data-tt-id="5"  data-image-id="5" data-method-key="" class="successLine ">
+                  <td>-</td>
+                  <td>- 非表示 -</td>
+                  <td class="srcInfo">nextSaturday.set(2014,Calendar.MAY,4);</td>
+                </tr>
+                                                                                                                                <tr data-tt-id="6"  data-image-id="6" data-method-key="org.junit.Assert.assertThat-Object,org.hamcrest.Matcher" class="successLine ">
+                  <td>-</td>
+                  <td>「CalendarUtility.getImmediateDayOfWeek(sunday,Calendar.SUNDAY)」が「変数「nextSaturday」」に等しいことをチェック</td>
+                  <td class="srcInfo">assertThat(CalendarUtility.getImmediateDayOfWeek(sunday,Calendar.SUNDAY),is(nextSaturday));</td>
+                </tr>
+                              </tbody>
+            </table>
+          </div>
+        </div>
+        <br/>
+        <div id="msg_container">
+                  </div>
+      </div>
+      <div id="right_container">
+        <div id="bxslider_container">
+        <ul class="bxslider">
+                    <li>
+            <div data-image-id="noImage" data-image-width="736" data-image-height="455" class="scrollContainer">
+              <img src="../../images/noImage.png" />
+            </div>
+          </li>
+                  </ul>
+      </div>
+    </div>
+    <div id="methodArgTestDocs">
+                                                                                                          <div class="hiddenMethodArgTestDoc" data-tt-id="6">CalendarUtility.getImmediateDayOfWeek(sunday,Calendar.SUNDAY)</div>
+                <div class="hiddenMethodArgTestDoc" data-tt-id="6">「変数「nextSaturday」」に等しい</div>
+                  </div>
+    <div id="localeData">
+      <div id="codeLineWithoutTestDoc">&#38750;&#34920;&#31034;</div>
+      <div id="jsLocalVar">&#22793;&#25968;&#12300;{0}&#12301;</div>
+      <div id="jsVarAssign">&#12300;{1}&#12301;&#12395;&#12300;{0}&#12301;&#12434;&#12475;&#12483;&#12488;</div>
+    </div>
+  </body>
+</html>

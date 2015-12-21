@@ -79,7 +79,11 @@ public class Work {
 
     @After
     public void tearDown() {
-        driver.quit();
+        try {
+            driver.quit();
+        } catch (Throwable e) {
+            e.printStackTrace();  // これが最適ではないですが、今日のところは…
+        }
     }
 
     /**

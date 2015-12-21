@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="practicework.PracticeWork1Spec" tests="1" failures="0" errors="0" timestamp="2015-12-21T04:08:19" hostname="hindai-09-PC" time="0.0">
+  <properties/>
+  <ignored-testcase name="OneCanReserveWith9Members" classname="practicework.PracticeWork1Spec" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

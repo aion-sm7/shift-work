@@ -1,5 +1,6 @@
 import java.io.File;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,6 +12,7 @@ import core.ChromeDriverTest;
  * このファイルをInteillJ IDEA上から、右クリック>'Run EnvironmentCheckTest' によりJUnitとして実行し、
  * JUnitのテストが成功すれば、インストールは正常に完了しています。
  */
+@Ignore
 public class EnvironmentCheckTest extends ChromeDriverTest {
     @Test
     public void checkThatInstalledSuccessfully() {

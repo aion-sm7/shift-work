@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="introwork.IntroWork1Test" tests="1" failures="0" errors="0" timestamp="2015-12-21T04:07:33" hostname="hindai-09-PC" time="0.0">
+  <properties/>
+  <ignored-testcase name="testLoginSuccess" classname="introwork.IntroWork1Test" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
