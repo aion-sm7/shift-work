@@ -27,6 +27,11 @@ dependencies {
     compile 'org.sahagin:sahagin:' + sahaginVersion
 }
 
+tasks.withType(Test) {
+    // コマンドラインから渡したシステムプロパティをGradleにも渡す
+    systemProperties = System.getProperties()
+}
+
 test {
     doFirst {
         // ローカルキャッシュからsahaginのJarファイルを検索

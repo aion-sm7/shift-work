@@ -48,7 +48,7 @@ public class Work {
         System.setProperty("webdriver.chrome.driver", chromeDriverPath());
         System.setProperty("webdriver.ie.driver", ieDriverPath());
 
-        // system propety かんきょうへんすうからうけとる
+        // system かんきょうへんすうからうけとる
         String browser = System.getProperty("browser");
 
         switch(browser) {
