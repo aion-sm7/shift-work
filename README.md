@@ -22,12 +22,8 @@ hubに対するnodeとしては，以下の3つがある．
 3. IE, Firefox, Chrome of Windows
 
 ### Test flow
-1. ローカル(Windows)に立ち上げたJenkinksにアクセス 
-2. JenkinsからSelenium gridに対してテストタスクを実行させる 
-3. Selenium gridから渡された引数(firefox, chrome, remote-firefox)など 
+1. ローカル(Windows)に立ち上げたJenkinksにアクセスし，タスクを実行ボタンを押す 
+2. Jenkinsが，Githubからsource codeをとってきて，Selenium gridに対して渡し，テストタスクを実行させる 
+3. テストレポートを出力
 
-1. 1番目
-2. 2番目
-3. 3番目
-
-
+![alt text](https://github.com/aion-sm7/shift-work/blob/master/image/slide.jpg?raw=true)
