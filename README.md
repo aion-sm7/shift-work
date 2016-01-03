@@ -8,17 +8,19 @@ PHPで書かれたECサイトフレームワークであるEC-cubeについて�
 Java
 ### 使用したライブラリ・フレームワーク
 Selenium WebDriver
-### 技術
+### 構成
 #### Jenkins
 Windowsローカルマシン上にJenkinsを構築し，Githubからソースコードを拾ってきて，後述するDocker上のSelenium gridにビルド・実行の命令を飛ばせるようにタスクを設定した．
+
+またgridには，後述のようにCent OS上で動くFirefox, ChromeさらにWindows上で動くFirefox, Chrome, IEをnodeとして繋いであるので，クロスプラットフォーム環境においてテストを実行できる．
 #### Selenium grid with Docker
 ##### hub on Docker
 Selenium gridのhubは，Docker上のCentOS上に構築してある．
 ##### node on Docker and local
 hubに対するnodeとしては，以下の3つがある．
-1. Chrome of CentOS on Docker
-2. Firefox of CentOS on Docker
-3. IE, Firefox, Chrome of Windows
+1. Chrome of CentOS on Docker  
+2. Firefox of CentOS on Docker  
+3. IE, Firefox, Chrome of Windows  
 
 ![alt text](https://github.com/aion-sm7/shift-work/blob/master/image/slide.jpg?raw=true)
 ### Flow
