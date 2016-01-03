@@ -20,7 +20,15 @@ Selenium gridのhubは，Docker上のCentOS上に構築してある．
 hubに対するnodeとしては，以下の3つがある．  
 1. Chrome of CentOS on Docker  
 2. Firefox of CentOS on Docker  
-3. IE, Firefox, Chrome of Windows  
+3. IE, Firefox, Chrome of Windows 
+
+#### Docker
+Windowsマシン上にVMをつくり，Dockerを運用した．  
+Dockerの設定は，[ここ](https://github.com/ootaken/jenkins-and-selenium-and-ec-cube3-on-docker)のものを使用した．
+
+1. te
+* te
+* te
 
 ![alt text](https://github.com/aion-sm7/shift-work/blob/master/image/slide.jpg?raw=true)
 ### Flow
