@@ -134,10 +134,10 @@ public class Work {
         driver.findElement(By.className("hover_change_image")).click();
         driver.get("http://192.168.99.100/shopping/nonmember");
 
-        driver.findElement(By.id("nonmember_name_name01")).sendKeys("松本");
-        driver.findElement(By.id("nonmember_name_name02")).sendKeys("智也");
-        driver.findElement(By.id("nonmember_kana_kana01")).sendKeys("まつもと");
-        driver.findElement(By.id("nonmember_kana_kana02")).sendKeys("ともや");
+        driver.findElement(By.id("nonmember_name_name01")).sendKeys("Familyname");
+        driver.findElement(By.id("nonmember_name_name02")).sendKeys("Firstname");
+        driver.findElement(By.id("nonmember_kana_kana01")).sendKeys("familyname");
+        driver.findElement(By.id("nonmember_kana_kana02")).sendKeys("firstname");
         driver.findElement(By.id("nonmember_company_name")).sendKeys("会社名");
         driver.findElement(By.id("zip01")).sendKeys("000");
         driver.findElement(By.id("zip02")).sendKeys("0000");
