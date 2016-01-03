@@ -18,6 +18,7 @@ Windowsローカルマシン上にJenkinsを構築し，Githubからソースコ
 Selenium gridのhubは，Docker上のCentOS上に構築してある．
 ##### node on Docker and local
 hubに対するnodeとしては，以下の3つがある．  
+
 1. Chrome of CentOS on Docker  
 * Firefox of CentOS on Docker  
 * IE, Firefox, Chrome of Windows 
@@ -32,12 +33,14 @@ Dockerの設定は，[ここ](https://github.com/ootaken/jenkins-and-selenium-an
 
 ![alt text](https://github.com/aion-sm7/shift-work/blob/master/image/slide.jpg?raw=true)
 ### Flow
+
 1. ローカル(Windows)に立ち上げたJenkinksにアクセスし，タスクを実行ボタンを押す 
 * Jenkinsが，Githubからsource codeをとってきて，Selenium gridに対して渡し，テストタスクを実行させる 
 * テストレポートを出力
 
 #### Test flow
 以下のいずれかの行程で，表記しているように動かない場合に，エラーみなす．  
+
 1. 各環境に構築したEC-cubeの特定商品のURLにアクセスする  
 例: http://demo3.ec-cube.net/products/detail/7  
 * アクセスしたページにおいて，"カートに入れる"をクリックし，画面遷移する  
