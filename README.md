@@ -13,7 +13,7 @@ Selenium WebDriver
 Windowsローカルマシン上にJenkinsを構築し，Githubからソースコードを拾ってきて，後述するDocker上のSelenium gridにビルド・実行の命令を飛ばせるようにタスクを設定した．
 
 またgridには，後述のようにCent OS上で動くFirefox, ChromeさらにWindows上で動くFirefox, Chrome, IEをnodeとして繋いであるので，クロスプラットフォーム環境においてテストを実行できる．
-#### Selenium grid with Docker
+#### Selenium grid
 ##### hub on Docker
 Selenium gridのhubは，Docker上のCentOS上に構築してある．
 ##### node on Docker and local
@@ -26,10 +26,6 @@ hubに対するnodeとしては，以下の3つがある．
 #### Docker
 Windowsマシン上にVMをつくり，Dockerを運用した．  
 Dockerの設定は，[ここ](https://github.com/ootaken/jenkins-and-selenium-and-ec-cube3-on-docker)のものを使用した．
-
-1. te
-* te
-* te
 
 ![alt text](https://github.com/aion-sm7/shift-work/blob/master/image/slide.jpg?raw=true)
 ### Flow
